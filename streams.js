@@ -81,6 +81,8 @@ function* process_file(signal, in_stream) {
 
 	out_stream.pipe(target_stream);
 
+	console.log('hello in the console');
+
 	signal.pr.catch(function f() {
 		out_stream.unpip(target_stream);
 		out_stream.destroy();
